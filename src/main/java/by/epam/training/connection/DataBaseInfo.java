@@ -11,11 +11,11 @@ public class DataBaseInfo {
     /**
      * The constant PASSWORD.
      */
-    public static final String PASSWORD = "1256";
+    public static final String PASSWORD = "root";
     /**
      * The constant URL.
      */
-    public static final String URL = "jdbc:mysql://localhost:3306/my_courier_schema?" +
+    public static final String URL = "jdbc:mysql://localhost:3306/my_courier_schema_2?" +
             "autoReconnect=true&" +
             "useSSL=false&useUnicode=true&" +
             "useJDBCCompliantTimezoneShift=true&" +
