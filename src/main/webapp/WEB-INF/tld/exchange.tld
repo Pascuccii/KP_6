@@ -8,7 +8,7 @@
     <uri>exchangeTags</uri>
     <tag>
         <name>footMessage</name>
-        <tag-class>by.epam.training.tag.CopyWriteTag</tag-class>
+        <tag-class>by.tag.CopyWriteTag</tag-class>
         <body-content>empty</body-content>
     </tag>
 </taglib>

@@ -1,7 +1,7 @@
 package by.epam.trainint.connection;
 
-import by.epam.training.connection.ConnectionPool;
-import by.epam.training.connection.ProxyConnection;
+import by.connection.ConnectionPool;
+import by.connection.ProxyConnection;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
