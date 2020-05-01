@@ -53,7 +53,7 @@
                     <td>${sessionScope.order.subject}</td>
                     <td>${sessionScope.order.user.login}</td>
                     <td>${sessionScope.order.totalPrice}</td>
-                    <td>${sessionScope.order.distance} km</td>
+                    <td>${sessionScope.order.distance}</td>
                     <c:choose>
                         <c:when test="${sessionScope.order.rate = true}">
                             <td>${express}</td>

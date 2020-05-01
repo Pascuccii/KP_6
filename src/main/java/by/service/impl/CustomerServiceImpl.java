@@ -15,9 +15,9 @@ import java.util.List;
 public class CustomerServiceImpl implements CustomerService {
     private CustomerDaoImpl customerDao = new CustomerDaoImpl();
 
-    private final double TRUCK_PRICE_PER_KM = 2;
-    private final double CAR_PRICE_PER_KM = 0.75;
-    private final double FOOT_COURIER_PRICE_PER_KM = 0.5;
+    private final double TRUCK_PRICE_PER_KM = 30;
+    private final double CAR_PRICE_PER_KM = 40;
+    private final double FOOT_COURIER_PRICE_PER_KM = 50;
     private final double EXPRESS_RATE_COEFFICIENT = 1.5;
 
     @Override
@@ -34,13 +34,13 @@ public class CustomerServiceImpl implements CustomerService {
         double totalCost = 0;
         switch (order.getTransport()) {
             case CAR:
-                totalCost = order.getDistance() * CAR_PRICE_PER_KM;
+                totalCost = (0.9 + 0.1 * order.getDistance()) * CAR_PRICE_PER_KM;
                 break;
             case TRUCK:
-                totalCost = order.getDistance() * TRUCK_PRICE_PER_KM;
+                totalCost = (0.9 + 0.1 * order.getDistance()) * TRUCK_PRICE_PER_KM;
                 break;
             case NONE:
-                totalCost = order.getDistance() * FOOT_COURIER_PRICE_PER_KM;
+                totalCost = (0.9 + 0.1 * order.getDistance()) * FOOT_COURIER_PRICE_PER_KM;
                 break;
         }
         if (order.getRate()) {

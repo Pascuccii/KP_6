@@ -19,9 +19,9 @@
     <fmt:message bundle="${locale}" key="locale.admin.button.changeRole" var="changeRole"/>
     <fmt:message bundle="${locale}" key="locale.admin.button.changeTransport" var="changeTransport"/>
     <fmt:message bundle="${locale}" key="locale.admin.button.changeRating" var="changeRating"/>
-    <fmt:message bundle="${locale}" key="locale.user.text.truck" var="truck"/>
-    <fmt:message bundle="${locale}" key="locale.user.text.car" var="car"/>
-    <fmt:message bundle="${locale}" key="locale.user.text.withoutTransport" var="withoutTransport"/>
+    <fmt:message bundle="${locale}" key="locale.user.text.english" var="truck"/>
+    <fmt:message bundle="${locale}" key="locale.user.text.french" var="car"/>
+    <fmt:message bundle="${locale}" key="locale.user.text.german" var="withoutTransport"/>
     <fmt:message bundle="${locale}" key="locale.user.button.back" var="back"/>
     <fmt:message bundle="${locale}" key="locale.user.title.loginRegex" var="loginRegex"/>
     <fmt:message bundle="${locale}" key="locale.message.userExist" var="userExist"/>

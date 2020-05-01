@@ -11,9 +11,9 @@
     <fmt:message bundle="${locale}" key="locale.message.userExist" var="userExist"/>
     <fmt:message bundle="${locale}" key="locale.message.wrongPattern" var="wrongPattern"/>
     <fmt:message bundle="${locale}" key="locale.user.text.register" var="register"/>
-    <fmt:message bundle="${locale}" key="locale.user.text.truck" var="truck"/>
-    <fmt:message bundle="${locale}" key="locale.user.text.car" var="car"/>
-    <fmt:message bundle="${locale}" key="locale.user.text.withoutTransport" var="withoutTransport"/>
+    <fmt:message bundle="${locale}" key="locale.user.text.english" var="truck"/>
+    <fmt:message bundle="${locale}" key="locale.user.text.french" var="car"/>
+    <fmt:message bundle="${locale}" key="locale.user.text.german" var="withoutTransport"/>
     <fmt:message bundle="${locale}" key="locale.user.label.login" var="login"/>
     <fmt:message bundle="${locale}" key="locale.user.label.password" var="password"/>
     <fmt:message bundle="${locale}" key="locale.user.label.confirmPassword" var="confirmPassword"/>

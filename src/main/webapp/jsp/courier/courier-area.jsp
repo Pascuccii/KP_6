@@ -8,9 +8,9 @@
 
     <fmt:message bundle="${locale}" key="locale.user.label.login" var="login"/>
     <fmt:message bundle="${locale}" key="locale.user.label.rating" var="rating"/>
-    <fmt:message bundle="${locale}" key="locale.user.text.truck" var="truck"/>
-    <fmt:message bundle="${locale}" key="locale.user.text.car" var="car"/>
-    <fmt:message bundle="${locale}" key="locale.user.text.withoutTransport" var="withoutTransport"/>
+    <fmt:message bundle="${locale}" key="locale.user.text.english" var="truck"/>
+    <fmt:message bundle="${locale}" key="locale.user.text.french" var="car"/>
+    <fmt:message bundle="${locale}" key="locale.user.text.german" var="withoutTransport"/>
     <fmt:message bundle="${locale}" key="locale.courier.text.yourTransport" var="yourTransport"/>
     <fmt:message bundle="${locale}" key="locale.user.button.personalRoom" var="personalRoom"/>
     <fmt:message bundle="${locale}" key="locale.customer.text.yourPersonalArea" var="yourPersonalArea"/>

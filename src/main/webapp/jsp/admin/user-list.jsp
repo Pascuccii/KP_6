@@ -7,9 +7,9 @@
     <fmt:setBundle basename="locale.locale" var="locale"/>
 
     <fmt:message bundle="${locale}" key="locale.user.text.listOfUsers" var="listOfUsers"/>
-    <fmt:message bundle="${locale}" key="locale.user.text.truck" var="truck"/>
-    <fmt:message bundle="${locale}" key="locale.user.text.car" var="car"/>
-    <fmt:message bundle="${locale}" key="locale.user.text.withoutTransport" var="withoutTransport"/>
+    <fmt:message bundle="${locale}" key="locale.user.text.english" var="truck"/>
+    <fmt:message bundle="${locale}" key="locale.user.text.french" var="car"/>
+    <fmt:message bundle="${locale}" key="locale.user.text.german" var="withoutTransport"/>
     <fmt:message bundle="${locale}" key="locale.user.button.personalRoom" var="personalRoom"/>
     <fmt:message bundle="${locale}" key="locale.admin.label.userId" var="userId"/>
     <fmt:message bundle="${locale}" key="locale.admin.label.login" var="userLogin"/>

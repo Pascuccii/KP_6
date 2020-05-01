@@ -11,9 +11,9 @@
     <fmt:message bundle="${locale}" key="locale.customer.label.rate" var="rate"/>
     <fmt:message bundle="${locale}" key="locale.user.text.yes" var="yes"/>
     <fmt:message bundle="${locale}" key="locale.user.text.no" var="no"/>
-    <fmt:message bundle="${locale}" key="locale.user.text.truck" var="truck"/>
-    <fmt:message bundle="${locale}" key="locale.user.text.car" var="car"/>
-    <fmt:message bundle="${locale}" key="locale.user.text.withoutTransport" var="withoutTransport"/>
+    <fmt:message bundle="${locale}" key="locale.user.text.english" var="truck"/>
+    <fmt:message bundle="${locale}" key="locale.user.text.french" var="car"/>
+    <fmt:message bundle="${locale}" key="locale.user.text.german" var="withoutTransport"/>
     <fmt:message bundle="${locale}" key="locale.user.text.confirmOrder" var="confirmOrder"/>
     <fmt:message bundle="${locale}" key="locale.user.label.distance" var="distance"/>
     <fmt:message bundle="${locale}" key="locale.user.label.totalCost" var="totalCost"/>
@@ -79,7 +79,7 @@
                 <span class="form-label">${distance}: </span>
                 <input class="login-form-text"
                        name="total"
-                       value="${sessionScope.order.distance}km"
+                       value="${sessionScope.order.distance}"
                        readonly>
                 <span class="form-label">${totalCost}: </span>
                 <input class="login-form-text"

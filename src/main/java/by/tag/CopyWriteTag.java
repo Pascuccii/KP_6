@@ -11,7 +11,7 @@ public class CopyWriteTag extends TagSupport {
 
     @Override
     public int doStartTag() throws JspException {
-        String copyWrite = "©. 2019";
+        String copyWrite = "©. 2020";
         try {
             JspWriter out = pageContext.getOut();
             out.write(copyWrite);

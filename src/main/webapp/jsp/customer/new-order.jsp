@@ -6,9 +6,9 @@
     <fmt:setLocale value="${sessionScope.local}"/>
     <fmt:setBundle basename="locale.locale" var="locale"/>
 
-    <fmt:message bundle="${locale}" key="locale.user.text.truck" var="truck"/>
-    <fmt:message bundle="${locale}" key="locale.user.text.car" var="car"/>
-    <fmt:message bundle="${locale}" key="locale.user.text.withoutTransport" var="withoutTransport"/>
+    <fmt:message bundle="${locale}" key="locale.user.text.english" var="truck"/>
+    <fmt:message bundle="${locale}" key="locale.user.text.french" var="car"/>
+    <fmt:message bundle="${locale}" key="locale.user.text.german" var="withoutTransport"/>
     <fmt:message bundle="${locale}" key="locale.user.label.distance" var="distance"/>
     <fmt:message bundle="${locale}" key="locale.user.button.personalRoom" var="personalRoom"/>
     <fmt:message bundle="${locale}" key="locale.customer.text.newOrder" var="newOrder"/>
@@ -53,9 +53,9 @@
                        type="number"
                        name="distance"
                        value=""
-                       placeholder="Enter the number of km from 1 to 1000"
+                       placeholder="Введите уровень владения языком (1-6)"
                        min="1"
-                       max="1000"
+                       max="6"
                        required>
                 <input type="hidden" name="command" value="confirm_order_command"/>
                 <input type="submit" value="${next}" class="login-form-button">
