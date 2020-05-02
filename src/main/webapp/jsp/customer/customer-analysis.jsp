@@ -6,24 +6,23 @@
     <fmt:setLocale value="${sessionScope.local}"/>
     <fmt:setBundle basename="locale.locale" var="locale"/>
 
-    <fmt:message bundle="${locale}" key="locale.customer.text.myDelivery" var="myDelivery"/>
-    <fmt:message bundle="${locale}" key="locale.customer.table.orderId" var="orderId"/>
-    <fmt:message bundle="${locale}" key="locale.customer.table.courierName" var="courierName"/>
-    <fmt:message bundle="${locale}" key="locale.customer.table.price" var="price"/>
-    <fmt:message bundle="${locale}" key="locale.customer.table.status" var="status"/>
-    <fmt:message bundle="${locale}" key="locale.customer.label.subject" var="subject"/>
+    <fmt:message bundle="${locale}" key="locale.user.text.listOfUsers" var="listOfUsers"/>
+    <fmt:message bundle="${locale}" key="locale.user.text.english" var="truck"/>
+    <fmt:message bundle="${locale}" key="locale.user.text.french" var="car"/>
+    <fmt:message bundle="${locale}" key="locale.user.text.german" var="withoutTransport"/>
     <fmt:message bundle="${locale}" key="locale.user.button.personalRoom" var="personalRoom"/>
-    <fmt:message bundle="${locale}" key="locale.user.text.new" var="newStatus"/>
-    <fmt:message bundle="${locale}" key="locale.user.text.rated" var="rated"/>
-    <fmt:message bundle="${locale}" key="locale.user.text.noDeliveryYet" var="noDeliveryYet"/>
-    <fmt:message bundle="${locale}" key="locale.user.text.processing" var="processing"/>
-    <fmt:message bundle="${locale}" key="locale.customer.button.refresh" var="refresh"/>
-    <fmt:message bundle="${locale}" key="locale.customer.button.rateCompletedOrders" var="rateCompletedOrders"/>
-    <fmt:message bundle="${locale}" key="locale.customer.button.newOrder" var="newOrder"/>
+    <fmt:message bundle="${locale}" key="locale.admin.label.userId" var="userId"/>
+    <fmt:message bundle="${locale}" key="locale.admin.label.login" var="userLogin"/>
+    <fmt:message bundle="${locale}" key="locale.admin.label.userRole" var="userRole"/>
+    <fmt:message bundle="${locale}" key="locale.admin.label.transport" var="userTransport"/>
+    <fmt:message bundle="${locale}" key="locale.admin.label.rating" var="userRating"/>
+    <fmt:message bundle="${locale}" key="locale.admin.text.courier" var="courier"/>
+    <fmt:message bundle="${locale}" key="locale.admin.text.customer" var="customer"/>
+    <fmt:message bundle="${locale}" key="locale.admin.button.edit" var="edit"/>
 
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="SHORTCUT ICON" href="../../assets/favicon.png" type="image/png">
-    <title>My delivery</title>
+    <title>List of users</title>
 </head>
 <body>
 <header>
@@ -31,85 +30,52 @@
 </header>
 <main class="main-form">
     <br>
-    <h2>${myDelivery}</h2>
-    <c:choose>
-        <c:when test="${not empty sessionScope.orders}">
-            <div class="table-container-head">
-                <table class="head-table">
-                    <tr>
-                        <th>${orderId}</th>
-                        <th>${subject}</th>
-                        <th>${courierName}</th>
-                        <th>${price}, BYN</th>
-                        <th>${status}</th>
-                    </tr>
-                </table>
-            </div>
-            <div class="table-container-body">
-                <table class="body-table">
-                    <c:forEach var="order" items="${sessionScope.orders}" varStatus="status">
-                        <tr>
-                            <td>${order.orderId}</td>
-                            <td>${order.subject}</td>
-                            <td>${order.user.login}</td>
-                            <td>${order.totalPrice}</td>
-                            <c:choose>
-                                <c:when test="${order.status == 'NEW'}">
-                                    <td>${newStatus}</td>
-                                </c:when>
-                                <c:when test="${order.status == 'RATED'}">
-                                    <td>${rated}</td>
-                                </c:when>
-                                <c:otherwise>
-                                    <td>${processing}</td>
-                                </c:otherwise>
-                            </c:choose>
-                        </tr>
-                    </c:forEach>
-                </table>
-            </div>
-            <div class="horizontal-button-container">
-                <div>
-                    <form action="controller" name="refreshOrder" method="GET">
-                        <input type="hidden" name="command" value="show_active_order_command">
-                        <input type="submit" value="${refresh}" class="join-us-button">
-                    </form>
-                </div>
-                <div>
-                    <form action="customer-main">
-                        <input class="join-us-button" type="submit" value="${personalRoom}">
-                    </form>
-                </div>
-                <div>
-                    <form action="controller" name="doneOrder" method="GET">
-                        <input type="hidden" name="command" value="show_done_order_command">
-                        <input type="submit" value="${rateCompletedOrders}" class="join-us-button">
-                    </form>
-                </div>
-            </div>
-        </c:when>
-        <c:otherwise>
-            <div class="empty-delivery-text">
-                <div style="text-align: center; color: #ffebcd;font-size: 23px; margin: 120px 0 200px;">
-                        ${noDeliveryYet}</div>
-            </div>
-            <div class="horizontal-button-container">
-                <form action="customer-main">
-                    <input class="join-us-button" type="submit" value="${personalRoom}">
-                </form>
-                <form action="new-order">
-                    <input class="join-us-button" type="submit" value="${newOrder}">
-                </form>
-                <form action="controller" name="doneOrder" method="GET">
-                    <input type="hidden" name="command" value="show_done_order_command">
-                    <input type="submit" value="${rateCompletedOrders}" class="join-us-button">
-                </form>
-            </div>
-        </c:otherwise>
-    </c:choose>
-    <c:if test="${sessionScope.user.role != 'CUSTOMER'}">
-        <jsp:forward page="/jsp/error/illegal-access-error.jsp"/>
-    </c:if>
+    <h2>${listOfUsers}</h2>
+    <div class="table-container-head">
+        <table class="head-table">
+            <tr>
+                <th>${userLogin}</th>
+                <th>${userRole}</th>
+                <th>${userTransport}</th>
+                <th>${userRating}</th>
+            </tr>
+        </table>
+    </div>
+    <div class="table-container-body">
+        <table class="body-table">
+            <c:forEach var="user" items="${sessionScope.users}" varStatus="status">
+                <tr>
+                    <td>${user.login}</td>
+                    <c:choose>
+                        <c:when test="${user.role == 'COURIER'}">
+                            <td>${courier}</td>
+                        </c:when>
+                        <c:otherwise>
+                            <td>${customer}</td>
+                        </c:otherwise>
+                    </c:choose>
+                    <c:choose>
+                        <c:when test="${user.transport == 'CAR'}">
+                            <td>${car}</td>
+                        </c:when>
+                        <c:when test="${user.transport == 'TRUCK'}">
+                            <td>${truck}</td>
+                        </c:when>
+                        <c:when test="${user.transport == 'NONE'}">
+                            <td>${withoutTransport}</td>
+                        </c:when>
+                        <c:otherwise>
+                            <td></td>
+                        </c:otherwise>
+                    </c:choose>
+                    <td>${user.rating}</td>
+                </tr>
+            </c:forEach>
+        </table>
+    </div>
+    <form action="customer-main" class="center-button-container">
+        <input class="join-us-button" type="submit" value="${personalRoom}">
+    </form>
 </main>
 <footer>
     <jsp:include page="/jsp/footer.jsp"/>

@@ -40,7 +40,8 @@
         <form action="rate">
             <input type="submit" value="${rates}" class="common-button">
         </form>
-        <form action="customer-analysis">
+        <form action="controller" method="GET" name="showTutorList">
+            <input type="hidden" name="command" value="show_tutor_list_command">
             <input type="submit" value="${analysis}" class="common-button">
         </form>
     </div>

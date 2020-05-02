@@ -1,6 +1,7 @@
 package by.service;
 
 import by.entity.Order;
+import by.entity.User;
 import by.exception.ServiceException;
 
 import java.util.List;
@@ -17,6 +18,7 @@ public interface CustomerService {
      */
     void checkout(Order order) throws ServiceException;
 
+    List<User> showTutorList() throws ServiceException;
     /**
      * Count total cost order.
      *

@@ -93,6 +93,10 @@ public enum CommandEnum {
      */
     SHOW_USER_LIST_COMMAND(new ShowUserListCommand()),
     /**
+     * The Show tutor list command.
+     */
+    SHOW_TUTOR_LIST_COMMAND(new ShowTutorsListCommand()),
+    /**
      * The Edit user command.
      */
     EDIT_USER_COMMAND(new EditUserCommand()),

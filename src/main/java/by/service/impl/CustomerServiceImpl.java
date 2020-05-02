@@ -1,7 +1,10 @@
 package by.service.impl;
 
+import by.dao.AdminDao;
+import by.dao.impl.AdminDaoImpl;
 import by.dao.impl.CustomerDaoImpl;
 import by.entity.Order;
+import by.entity.User;
 import by.exception.DaoException;
 import by.exception.ServiceException;
 import by.service.CustomerService;
@@ -97,6 +100,16 @@ public class CustomerServiceImpl implements CustomerService {
             throw new ServiceException(e);
         }
         return updatedRating;
+    }
+
+    @Override
+    public List<User> showTutorList() throws ServiceException {
+        try {
+            AdminDaoImpl adminDao = new AdminDaoImpl();
+            return adminDao.selectUserList();
+        } catch (DaoException e) {
+            throw new ServiceException(e);
+        }
     }
 
     @Override

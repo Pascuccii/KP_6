@@ -31,64 +31,114 @@
 <main class="main-form">
     <br>
     <h2>${listOfUsers}</h2>
-    <div class="table-container-head">
-        <table class="head-table">
-            <tr>
-                <th>${userId}</th>
-                <th>${userLogin}</th>
-                <th>${userRole}</th>
-                <th>${userTransport}</th>
-                <th>${userRating}</th>
-                <th>${edit}</th>
-            </tr>
-        </table>
-    </div>
-    <div class="table-container-body">
-        <table class="body-table">
-            <c:forEach var="user" items="${sessionScope.users}" varStatus="status">
-                <tr>
-                    <td>${user.id}</td>
-                    <td>${user.login}</td>
-                    <c:choose>
-                        <c:when test="${user.role == 'COURIER'}">
-                            <td>${courier}</td>
-                        </c:when>
-                        <c:otherwise>
-                            <td>${customer}</td>
-                        </c:otherwise>
-                    </c:choose>
-                    <c:choose>
-                        <c:when test="${user.transport == 'CAR'}">
-                            <td>${car}</td>
-                        </c:when>
-                        <c:when test="${user.transport == 'TRUCK'}">
-                            <td>${truck}</td>
-                        </c:when>
-                        <c:when test="${user.transport == 'NONE'}">
-                            <td>${withoutTransport}</td>
-                        </c:when>
-                        <c:otherwise>
-                            <td></td>
-                        </c:otherwise>
-                    </c:choose>
-                    <td>${user.rating}</td>
-                    <td>
-                        <form action="controller" method="POST">
-                            <input type="hidden" name="command" value="edit_user_command">
-                            <input type="hidden" name="userId" value="${user.id}">
-                            <input type="submit" value="V" class="lang-button">
-                        </form>
-                    </td>
-                </tr>
-            </c:forEach>
-        </table>
-    </div>
-    <form action="admin-main" class="center-button-container">
-        <input class="join-us-button" type="submit" value="${personalRoom}">
-    </form>
-    <c:if test="${sessionScope.user.role != 'ADMIN'}">
-        <jsp:forward page="/jsp/error/illegal-access-error.jsp"/>
-    </c:if>
+    <c:choose>
+        <c:when test="${sessionScope.user.role != 'ADMIN'}">
+            <div class="table-container-head">
+                <table class="head-table">
+                    <tr>
+                        <th>${userLogin}</th>
+                        <th>${userRole}</th>
+                        <th>${userTransport}</th>
+                        <th>${userRating}</th>
+                    </tr>
+                </table>
+            </div>
+            <div class="table-container-body">
+                <table class="body-table">
+                    <c:forEach var="user" items="${sessionScope.users}" varStatus="status">
+                        <c:if test="${user.role == 'COURIER'}">
+                            <tr>
+                                <td>${user.login}</td>
+                                <c:choose>
+                                    <c:when test="${user.role == 'COURIER'}">
+                                        <td>${courier}</td>
+                                    </c:when>
+                                    <c:otherwise>
+                                        <td>${customer}</td>
+                                    </c:otherwise>
+                                </c:choose>
+                                <c:choose>
+                                    <c:when test="${user.transport == 'CAR'}">
+                                        <td>${car}</td>
+                                    </c:when>
+                                    <c:when test="${user.transport == 'TRUCK'}">
+                                        <td>${truck}</td>
+                                    </c:when>
+                                    <c:when test="${user.transport == 'NONE'}">
+                                        <td>${withoutTransport}</td>
+                                    </c:when>
+                                    <c:otherwise>
+                                        <td></td>
+                                    </c:otherwise>
+                                </c:choose>
+                                <td>${user.rating}</td>
+                            </tr>
+                        </c:if>
+                    </c:forEach>
+                </table>
+            </div>
+            <form action="customer-main" class="center-button-container">
+                <input class="join-us-button" type="submit" value="${personalRoom}">
+            </form>
+        </c:when>
+        <c:otherwise>
+            <div class="table-container-head">
+                <table class="head-table">
+                    <tr>
+                        <th>${userId}</th>
+                        <th>${userLogin}</th>
+                        <th>${userRole}</th>
+                        <th>${userTransport}</th>
+                        <th>${userRating}</th>
+                        <th>${edit}</th>
+                    </tr>
+                </table>
+            </div>
+            <div class="table-container-body">
+                <table class="body-table">
+                    <c:forEach var="user" items="${sessionScope.users}" varStatus="status">
+                        <tr>
+                            <td>${user.id}</td>
+                            <td>${user.login}</td>
+                            <c:choose>
+                                <c:when test="${user.role == 'COURIER'}">
+                                    <td>${courier}</td>
+                                </c:when>
+                                <c:otherwise>
+                                    <td>${customer}</td>
+                                </c:otherwise>
+                            </c:choose>
+                            <c:choose>
+                                <c:when test="${user.transport == 'CAR'}">
+                                    <td>${car}</td>
+                                </c:when>
+                                <c:when test="${user.transport == 'TRUCK'}">
+                                    <td>${truck}</td>
+                                </c:when>
+                                <c:when test="${user.transport == 'NONE'}">
+                                    <td>${withoutTransport}</td>
+                                </c:when>
+                                <c:otherwise>
+                                    <td></td>
+                                </c:otherwise>
+                            </c:choose>
+                            <td>${user.rating}</td>
+                            <td>
+                                <form action="controller" method="POST">
+                                    <input type="hidden" name="command" value="edit_user_command">
+                                    <input type="hidden" name="userId" value="${user.id}">
+                                    <input type="submit" value="V" class="lang-button">
+                                </form>
+                            </td>
+                        </tr>
+                    </c:forEach>
+                </table>
+            </div>
+            <form action="admin-main" class="center-button-container">
+                <input class="join-us-button" type="submit" value="${personalRoom}">
+            </form>
+        </c:otherwise>
+    </c:choose>
 </main>
 <footer>
     <jsp:include page="/jsp/footer.jsp"/>
