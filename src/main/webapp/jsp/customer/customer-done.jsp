@@ -18,8 +18,8 @@
     <fmt:message bundle="${locale}" key="locale.user.text.done" var="doneStatus"/>
     <fmt:message bundle="${locale}" key="locale.customer.button.refresh" var="refresh"/>
 
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="SHORTCUT ICON" href="./assets/favicon.png" type="image/png">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="SHORTCUT ICON" href="../../assets/favicon.png" type="image/png">
     <title>Completed delivery</title>
 </head>
 <body>

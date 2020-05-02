@@ -19,8 +19,8 @@
     <fmt:message bundle="${locale}" key="locale.user.title.loginRegex" var="loginRegex"/>
     <fmt:message bundle="${locale}" key="locale.user.title.passwordRegex" var="passwordRegex"/>
 
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="SHORTCUT ICON" href="./assets/favicon.png" type="image/png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="SHORTCUT ICON" href="../assets/favicon.png" type="image/png">
     <title>Login</title>
 </head>
 <body>

@@ -41,6 +41,10 @@ public class JspAddress {
      */
     public static final String CUSTOMER_DELIVERY = "/customer-delivery";
     /**
+     * The constant CUSTOMER_ANALYSIS.
+     */
+    public static final String CUSTOMER_ANALYSIS = "/customer-analysis";
+    /**
      * The constant CUSTOMER_DONE.
      */
     public static final String CUSTOMER_DONE = "/customer-done";

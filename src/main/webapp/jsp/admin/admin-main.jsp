@@ -10,8 +10,8 @@
     <fmt:message bundle="${locale}" key="locale.customer.button.personalArea" var="personalArea"/>
     <fmt:message bundle="${locale}" key="locale.user.button.showUserList" var="showUserList"/>
 
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="SHORTCUT ICON" href="./assets/favicon.png" type="image/png">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="SHORTCUT ICON" href="../../assets/favicon.png" type="image/png">
     <title>Hi daddy!</title>
 </head>
 <body>
@@ -33,7 +33,7 @@
         </form>
     </div>
     <div class="image-box-admin">
-        <img src="./assets/home-background.jpg" alt="#" width="700" height="415">
+        <img src="../../assets/home-background.png" alt="#" width="850" height="400">
     </div>
     <c:if test="${sessionScope.user.role != 'ADMIN'}">
         <jsp:forward page="/jsp/error/illegal-access-error.jsp"/>

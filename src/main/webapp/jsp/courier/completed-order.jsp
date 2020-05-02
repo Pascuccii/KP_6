@@ -21,8 +21,8 @@
     <fmt:message bundle="${locale}" key="locale.user.button.personalRoom" var="personalRoom"/>
     <fmt:message bundle="${locale}" key="locale.user.button.back" var="back"/>
 
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="SHORTCUT ICON" href="./assets/favicon.png" type="image/png">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="SHORTCUT ICON" href="../../assets/favicon.png" type="image/png">
     <title>Completed orders</title>
 </head>
 <body>

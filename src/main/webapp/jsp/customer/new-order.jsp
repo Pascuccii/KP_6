@@ -19,8 +19,8 @@
     <fmt:message bundle="${locale}" key="locale.customer.label.rate" var="rate"/>
     <fmt:message bundle="${locale}" key="locale.customer.button.next" var="next"/>
 
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="SHORTCUT ICON" href="./assets/favicon.png" type="image/png">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="SHORTCUT ICON" href="../../assets/favicon.png" type="image/png">
     <title>New Order</title>
 </head>
 <body>

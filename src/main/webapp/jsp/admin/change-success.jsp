@@ -10,8 +10,8 @@
     <fmt:message bundle="${locale}" key="locale.user.button.showUserList" var="showUserList"/>
     <fmt:message bundle="${locale}" key="locale.admin.text.changesAccepted" var="changesAccepted"/>
 
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="SHORTCUT ICON" href="./assets/favicon.png" type="image/png">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="SHORTCUT ICON" href="../../assets/favicon.png" type="image/png">
     <title>Rating</title>
 </head>
 <body>

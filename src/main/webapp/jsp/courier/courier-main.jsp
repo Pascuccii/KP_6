@@ -15,8 +15,8 @@
     <fmt:message bundle="${locale}" key="locale.customer.button.rates" var="rates"/>
     <fmt:message bundle="${locale}" key="locale.customer.button.myDelivery" var="myDelivery"/>
 
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="SHORTCUT ICON" href="./assets/favicon.png" type="image/png">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="SHORTCUT ICON" href="../../assets/favicon.png" type="image/png">
     <title>Welcome</title>
 </head>
 <body>
@@ -46,7 +46,7 @@
         </form>
     </div>
     <div class="image-box">
-        <img src="./assets/home-background.jpg" alt="#" width="700" height="415">
+        <img src="../../assets/home-background.png" alt="#" width="850" height="400">
     </div>
     <c:if test="${sessionScope.user.role != 'COURIER'}">
         <jsp:forward page="/jsp/error/illegal-access-error.jsp"/>

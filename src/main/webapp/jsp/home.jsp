@@ -11,9 +11,9 @@
     <fmt:message bundle="${locale}" key="locale.user.button.joinAsCustomer" var="joinAsCustomer"/>
     <fmt:message bundle="${locale}" key="locale.user.button.personalRoom" var="personalRoom"/>
 
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="SHORTCUT ICON" href="./assets/favicon.png" type="image/png">
-    <title>Courier Exchange</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="SHORTCUT ICON" href="../assets/favicon.png" type="image/png">
+    <title>Preply</title>
 </head>
 <body>
 <header>

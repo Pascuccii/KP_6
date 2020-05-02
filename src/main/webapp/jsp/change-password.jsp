@@ -21,9 +21,9 @@
     <fmt:message bundle="${locale}" key="locale.user.title.passwordRegex" var="passwordRegex"/>
     <fmt:message bundle="${locale}" key="locale.user.button.personalRoom" var="personalRoom"/>
 
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="SHORTCUT ICON" href="./assets/favicon.png" type="image/png">
-    <script src="./js/main.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="SHORTCUT ICON" href="../assets/favicon.png" type="image/png">
+    <script src="../js/main.js"></script>
     <title>Change password</title>
 </head>
 <body>

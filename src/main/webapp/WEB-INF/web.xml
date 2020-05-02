@@ -105,6 +105,15 @@
     </servlet-mapping>
 
     <servlet>
+        <servlet-name>Customer-analysis</servlet-name>
+        <jsp-file>/jsp/customer/customer-analysis.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Customer-analysis</servlet-name>
+        <url-pattern>/customer-analysis</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <servlet-name>Customer-done</servlet-name>
         <jsp-file>/jsp/customer/customer-done.jsp</jsp-file>
     </servlet>
@@ -291,12 +300,6 @@
         </jsp-property-group>
     </jsp-config>
 
-    <jsp-cofig>
-        <taglib>
-            <taglib-uri>exchangeTags</taglib-uri>
-            <laglib-location>/WEB-INF/tld/custom.tld</laglib-location>
-        </taglib>
-    </jsp-cofig>
 
     <description>MySQL</description>
     <resource-ref>

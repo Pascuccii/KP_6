@@ -20,8 +20,8 @@
     <fmt:message bundle="${locale}" key="locale.customer.button.orderTransportation" var="orderTransportation"/>
     <fmt:message bundle="${locale}" key="locale.customer.button.makeChanges" var="makeChanges"/>
 
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="SHORTCUT ICON" href="./assets/favicon.png" type="image/png">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="SHORTCUT ICON" href="../../assets/favicon.png" type="image/png">
     <title>Confirm order</title>
 </head>
 <body>

@@ -3,19 +3,24 @@ body {
     padding: 0;
     background-size: cover;
     width: 100vw;
+    font-family: Geneva, 'Comic Sans MS', Helvetica, sans-serif;
+}
+
+button {
+    height: 40px;
 }
 
 h2 {
     width: 100%;
     text-align: center;
-    color: #ffebcd;
-    font-size: 30px;
+    color: #abe0ff;
+    font-size: 40px;
 }
 
 table {
     width: 80%;
     border-collapse: collapse;
-    color: #ffebcd;
+    color: #abe0ff;
     padding: 5px 0;
     text-align: left;
     position: relative;
@@ -25,42 +30,42 @@ table {
 th {
     text-align: center;
     width: 20%;
-    color: #ffebcd;
-    border-bottom: 2px solid #ffebcd;
+    color: #abe0ff;
+    border-bottom: 2px solid #abe0ff;
     padding: 10px 8px;
 }
 
 td {
     text-align: center;
     width: 20%;
-    color: #ffebcd;
+    color: #abe0ff;
     padding: 9px 8px;
     transition: .3s linear;
 }
 
 tr:hover td {
-    color: #ffd21f
+    color: #e7ffee;
 }
 
 p {
     text-align: left;
     margin-left: 60px;
     margin-top: 30px;
-    color: #ffebcd;
-    font-size: 30px;
+    color: #abe0ff;
+    font-size: 40px;
 }
 
 .header {
     width: 100%;
     height: 15vh;
-    background-color: #ffffff;
+    background-color: #3797aa;
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;
 }
 
 .header-text {
-    color: #23283a;
+    color: #426ea0;
     font-weight: 900;
 }
 
@@ -79,23 +84,29 @@ p {
 }
 
 .lang-button {
-    width: 40px;
-    height: 25px;
-    background: #ffd21f;
+    width: 50px;
+    height: 30px;
+    background: #123e63;
+    -webkit-text-fill-color: #abe0ff;
     border-radius: 4px;
     cursor: pointer;
+    font-size: 18px;
 }
 
 .signIn-button, .join-us-button {
-    width: 120px;
-    height: 36px;
-    background: #ffd21f;
+    width: 100px;
+    height: 30px;
+    background: #123e63;
+    -webkit-text-fill-color: #abe0ff;
     border-radius: 4px;
     cursor: pointer;
+    font-family: Geneva, 'Comic Sans MS', Helvetica, sans-serif;
+    font-size: 18px;
 }
 
 .join-us-button {
-    width: 300px;
+    width: 330px;
+    height: 30px;
 }
 
 .sign-box {
@@ -103,6 +114,7 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-right: 50px;
 }
 
 .welcome-box {
@@ -112,12 +124,13 @@ p {
     align-items: center;
     width: 100%;
     height: 75vh;
-    background-color: #23283a;
+    background-image: url("../assets/home-background-blured.png");
 }
 
 .welcome-text {
-    color: #ffebcd;
-    font-size: 28px;
+    color: #abe0ff;
+    font-size: 40px;
+    font-family: Geneva, 'Comic Sans MS', Helvetica, sans-serif;
 }
 
 .container {
@@ -133,14 +146,14 @@ p {
     background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
-    color: #fff;
+    color: #3797aa;
 }
 
 .main-form {
     width: 100%;
     height: 75vh;
     min-height: 75vh;
-    background-color: #23283a;
+    background-color: #426ea0;
 }
 
 .logIn-form-box {
@@ -150,7 +163,7 @@ p {
     align-items: center;
     width: 100%;
     height: 55vh;
-    background-color: #23283a;
+    background-color: #426ea0;
 }
 
 .logIn-form-box-2 {
@@ -187,51 +200,57 @@ p {
 
 .login-form-text, .login-form-password, .form-dropdown, .form-option {
     margin: 5px 0;
-    background-color: #ffffff;
-    border: 1px solid #ffd21f;
+    background-color: #3797aa;
+    border: 1px solid #123e63;
     border-radius: 4px;
     padding: 9px 11px;
-    color: #23283a;
+    color: #66b2ff;
     width: 60%;
 }
 
 .form-label {
     align-self: flex-start;
     margin-left: 20%;
-    color: #ffd21f;
-    font-size: 20px;
+    color: #123e63;
+    -webkit-text-fill-color: #abe0ff;
+    font-size: 30px;
 }
 
 .login-form-message {
     width: 60%;
     align-self: center;
     color: #ff1717;
-    font-size: 16px;
+    font-size: 20px;
     text-align: center;
     margin-top: 10px;
 }
 
 .login-form-button {
     width: 60%;
-    background: #ffd21f;
+    background: #123e63;
+    -webkit-text-fill-color: #abe0ff;
     border-radius: 4px;
     cursor: pointer;
     padding: 9px 11px;
     margin-top: 10px;
+    font-family: Geneva, 'Comic Sans MS', Helvetica, sans-serif;
 }
 
 .common-button {
-    width: 250px;
-    background: #ffd21f;
+    width: 280px;
+    background: #123e63;
+    -webkit-text-fill-color: #abe0ff;
     border-radius: 4px;
+    text-align: center;
     cursor: pointer;
     padding: 9px 11px;
     margin-top: 10px;
+    font-family: Geneva, 'Comic Sans MS', Helvetica, sans-serif;
 }
 
 .welcome-area, .welcome-main-text {
-    color: #ffebcd;
-    font-size: 18px;
+    color: #abe0ff;
+    font-size: 20px;
 }
 
 .navigation-bar {
@@ -244,16 +263,16 @@ p {
 }
 
 .image-box {
-    width: 700px;
-    height: 415px;
+    width: 850px;
+    height: 400px;
     margin-left: 550px;
     margin-top: -320px;
     box-shadow: 0px 0px 25px midnightblue;
 }
 
 .image-box-admin {
-    width: 700px;
-    height: 415px;
+    width: 850px;
+    height: 400px;
     margin-left: 550px;
     margin-top: -200px;
     box-shadow: 0px 0px 25px midnightblue;
@@ -271,8 +290,9 @@ p {
 
 .user-area-label {
     width: fit-content;
-    color: #ffd21f;
-    font-size: 20px;
+    color: #123e63;
+    -webkit-text-fill-color: #abe0ff;
+    font-size: 30px;
 }
 
 .change-password-form-box {
@@ -328,6 +348,7 @@ p {
     width: 100%;
     box-sizing: border-box;
     padding: 0 110px;
+    font-family: Geneva, 'Comic Sans MS', Helvetica, sans-serif;
 }
 
 .center-button-container {
@@ -335,20 +356,22 @@ p {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    font-family: Geneva, 'Comic Sans MS', Helvetica, sans-serif;
 }
 
 .footer {
     width: 100%;
     height: 10vh;
     display: flex;
-    color: #ffffff;
+    color: #3797aa;
+    background-color: #3797aa;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
 }
 
 .footer-text {
-    color: #23283a;
+    color: #66b2ff;
     font-size: 16px;
 }
 

@@ -10,7 +10,7 @@
     <fmt:message bundle="${locale}" key="locale.user.button.signIn" var="signIn"/>
     <fmt:message bundle="${locale}" key="locale.user.button.logout" var="logout"/>
 
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Header</title>
 </head>
 <body>
@@ -18,7 +18,7 @@
     <form action="controller">
         <input type="hidden" name="command" value="home"/>
         <div class="logo">
-            <input type="image" src="./assets/logo.png" alt="#" width="350" height="93.75">
+            <input type="image" src="../assets/logo.png" alt="#" width="380" height="130`">
         </div>
     </form>
     <div class="sign-box">
