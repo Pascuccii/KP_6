@@ -1,7 +1,7 @@
-CREATE DATABASE IF NOT EXISTS courier_exchange_db
+CREATE DATABASE IF NOT EXISTS my_courier_schema_2
 	CHARACTER SET = utf8
     COLLATE utf8_general_ci;
-    USE courier_exchange_db;
+    USE my_courier_schema_2;
 
 -- -----------------------------------------------------
 -- Schema my_courier_schema
@@ -44,7 +44,7 @@ CREATE TABLE IF NOT EXISTS `my_courier_schema_2`.`user` (
   `password` VARCHAR(45) NOT NULL,
   `role_id` INT(1) NOT NULL,
   `transport_id` INT NULL,
-  `rating` DECIMAL(1,1) NOT NULL DEFAULT 0,
+  `rating` DECIMAL(2,1) NOT NULL DEFAULT 0,
   PRIMARY KEY (`user_id`),
   UNIQUE INDEX `id_UNIQUE` (`user_id` ASC) VISIBLE,
   UNIQUE INDEX `login_UNIQUE` (`login` ASC) VISIBLE,
@@ -52,12 +52,12 @@ CREATE TABLE IF NOT EXISTS `my_courier_schema_2`.`user` (
   INDEX `fk_user_transport1_idx` (`transport_id` ASC) VISIBLE,
   CONSTRAINT `fk_user_role1`
     FOREIGN KEY (`role_id`)
-    REFERENCES `my_courier_schema`.`role` (`role_id`)
+    REFERENCES `my_courier_schema_2`.`role` (`role_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_user_transport1`
     FOREIGN KEY (`transport_id`)
-    REFERENCES `my_courier_schema`.`transport` (`transport_id`)
+    REFERENCES `my_courier_schema_2`.`transport` (`transport_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -100,22 +100,22 @@ CREATE TABLE IF NOT EXISTS `my_courier_schema_2`.`shipping_order` (
   INDEX `fk_order_transport1_idx` (`transport_id` ASC) VISIBLE,
   CONSTRAINT `fk_order_order_status1`
     FOREIGN KEY (`order_status_id`)
-    REFERENCES `my_courier_schema`.`order_status` (`id_status`)
+    REFERENCES `my_courier_schema_2`.`order_status` (`id_status`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_order_user1`
     FOREIGN KEY (`customer_id`)
-    REFERENCES `my_courier_schema`.`user` (`user_id`)
+    REFERENCES `my_courier_schema_2`.`user` (`user_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_order_user2`
     FOREIGN KEY (`courier_id`)
-    REFERENCES `my_courier_schema`.`user` (`user_id`)
+    REFERENCES `my_courier_schema_2`.`user` (`user_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_order_transport1`
     FOREIGN KEY (`transport_id`)
-    REFERENCES `my_courier_schema`.`transport` (`transport_id`)
+    REFERENCES `my_courier_schema_2`.`transport` (`transport_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
